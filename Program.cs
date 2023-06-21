@@ -11,14 +11,14 @@ namespace TelegramBotForSteamActivity
 
         //CONFIG:
         //Insert steamApiKey
-        public static string steamApiKey = "paste here";
+        public static string steamApiKey = "pastehere";
         //Insert telegram token api
-        public static string token = "paste here";
+        public static string token = "pastehere";
         public static object telegramBotClient = new TelegramBotClient(token);
         //Insert the chat id where the bot should send the messages
         public static long chatId = -0;
         //Insert the steamID here
-        public static string steamId = "76561198942077537";
+        public static string steamId = "76561198080342304";
 
         //Should create a poll?
         public static bool pollAllow = true;
@@ -80,7 +80,7 @@ namespace TelegramBotForSteamActivity
                     if (IsPlaying == false){
 
                         // If the user is playing:
-                        if (userSummary.Response.Players[0].GameExtraInfo != null && userSummary.Response.Players[0].GameExtraInfo != "Soundpad") {
+                        if (userSummary.Response.Players[0].GameExtraInfo != null) {
                             string game = userSummary.Response.Players[0].GameExtraInfo;
                             string message;
                             message = Finalmessage(name, game);
